@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8ee" />
+  <meta name="description" content="A tiny garden made with love for Nawshin." />
+  <title>Our Little Garden, Nawshin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="love-garden" id="love-garden">
+    <div class="sun-wash" aria-hidden="true"></div>
+    <div class="light-ray ray-one" aria-hidden="true"></div>
+    <div class="light-ray ray-two" aria-hidden="true"></div>
+    <div class="pollen-field" id="pollen-field" aria-hidden="true"></div>
+    <div class="butterfly butterfly-one" aria-hidden="true"><span></span><span></span></div>
+    <div class="butterfly butterfly-two" aria-hidden="true"><span></span><span></span></div>
+
+    <!-- A gentle two-step welcome before the game begins. -->
+    <section class="welcome-flow" id="welcome-flow" aria-label="A message for Nawshin">
+      <article class="welcome-screen active" id="message-screen">
+        <div class="welcome-card glass-card">
+          <div class="welcome-decoration" aria-hidden="true"><span>✿</span><i></i><span>✿</span></div>
+          <p class="welcome-step">A little note for Nawshin</p>
+          <h2>My dearest Nawshin,</h2>
+          <p class="love-message">I know we have faced moments that feel heavy, and there may still be challenges ahead. But we do not have to carry them alone. We will be patient, hold on to love, and face every storm together.</p>
+          <p class="love-message">You are such a strong woman brave, kind, and more capable than you know. I believe in you, in us, and in the beautiful future we are still growing toward. Onek Valobashi Nawshin</p>
+          <button class="welcome-button" id="message-continue" type="button">A little surprise awaits <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+
+      <article class="welcome-screen" id="game-invite-screen" aria-hidden="true">
+        <div class="welcome-card glass-card game-invite-card">
+          <div class="tiny-garden" aria-hidden="true"><span>🌼</span><span>🌿</span><span>🌼</span></div>
+          <p class="welcome-step">A tiny surprise, made for you</p>
+          <h2>There’s a little game for you.</h2>
+          <p class="game-question">Will you play it with me, Nawshin?</p>
+          <button class="welcome-button play-button" id="play-game" type="button">Yes, let’s play <span aria-hidden="true">🌼</span></button>
+          <p class="soft-caption">It only takes a few little flowers.</p>
+        </div>
+      </article>
+    </section>
+
+    <div class="game-experience" id="game-experience" aria-hidden="true">
+      <header class="topbar glass-card">
+        <div class="brand">
+          <span class="brand-flower" aria-hidden="true">✿</span>
+          <div>
+            <p class="eyebrow">A small garden for Nawshin</p>
+            <h1>Bring Our Garden Together</h1>
+          </div>
+        </div>
+        <div class="progress-pill" aria-live="polite" aria-atomic="true">
+          <span class="progress-flower" aria-hidden="true">🌼</span>
+          <span id="progress-text">0 / 25</span>
+          <span class="progress-label">Flowers Collected</span>
+        </div>
+      </header>
+
+      <section class="garden-stage" id="garden-stage" aria-label="Bring the daisies into the glowing garden">
+        <div class="intro-card glass-card" id="intro-card">
+          <p class="intro-kicker">A tiny game with a big meaning</p>
+          <p>Some things may feel scattered, but every little step brings us closer together.</p>
+          <span class="instruction"><span class="hand" aria-hidden="true">☝</span> Drag each daisy into our garden</span>
+        </div>
+
+        <div class="garden-zone" id="garden-zone" aria-label="Glowing garden drop area">
+          <div class="garden-aura aura-one" aria-hidden="true"></div>
+          <div class="garden-aura aura-two" aria-hidden="true"></div>
+          <div class="garden-ring ring-one" aria-hidden="true"></div>
+          <div class="garden-ring ring-two" aria-hidden="true"></div>
+          <div class="garden-core">
+            <span class="garden-icon" aria-hidden="true">♡</span>
+            <span class="garden-copy">our garden</span>
+          </div>
+        </div>
+
+        <div class="sparkle-layer" id="sparkle-layer" aria-hidden="true"></div>
+        <div class="petal-layer" id="petal-layer" aria-hidden="true"></div>
+        <div class="bokeh-layer" id="bokeh-layer" aria-hidden="true"></div>
+
+        <div class="giant-daisy" id="giant-daisy" aria-hidden="true">
+          <div class="giant-petals" id="giant-petals"></div>
+          <div class="giant-center"></div>
+        </div>
+      </section>
+
+      <section class="love-letter glass-card" id="love-letter" aria-live="polite" aria-label="A message from the heart">
+        <div class="letter-flower" aria-hidden="true">✿</div>
+        <p class="letter-text" id="letter-text"></p>
+        <span class="letter-cursor" id="letter-cursor" aria-hidden="true"></span>
+      </section>
+
+      <footer class="bottom-note" id="bottom-note">Made with all my love, for you <span aria-hidden="true">♡</span></footer>
+    </div>
+  </main>
+  <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2139ba1eb295942',t:'MTc4NTA3MTA0Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f"}' crossorigin="anonymous"></script>
+</body>
+</html>
